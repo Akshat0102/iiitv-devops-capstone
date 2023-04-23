@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
 		    try {
-			sh "docker rm -f capstone_container"
+			sh "docker rm -f 202051016_container"
 		   } catch (e) {
 			sh 'echo "Container does not exist"'	
 		}
@@ -24,7 +24,7 @@ pipeline {
       }
         stage('Building Website') {
             steps {
-                sh 'docker build . -t capstone_image'
+                sh 'docker build . -t 202051016_image'
             }
        }
 
